@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        Destroy(gameObject);
+       // SceneManager.LoadScene("GameOver");
     }
 }

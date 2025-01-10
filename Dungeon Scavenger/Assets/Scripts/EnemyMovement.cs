@@ -49,18 +49,18 @@ public class EnemyMovementCombat : MonoBehaviour
     {
         //Keeps from interlapping with target (Player)
         distanceStop = Vector2.Distance(transform.position, target.transform.position);
-        anim.Play("Idle Animation");
+        // anim.Play("Idle Animation");
 
-        if (distanceStop >= 1.3)
+        if (distanceStop >= 1.5)
         {
             //Makes the Enemy follow target (Player)
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-            anim.Play("Run Animation");
+            // anim.Play("Run Animation");
         }
     }
 
     public void attackAnimation()
     {
-        anim.Play("Attack Animation"); //Might need work for while damage
+        // anim.Play("Attack Animation"); //Might need work for while damage
     }
 }
