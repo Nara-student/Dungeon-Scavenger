@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/test scene alaf o Adam.unity
     guid: f2e4312b1d21eb94c84035eb165fbbdd
+  - enabled: 1
+    path: Assets/Scenes/ParkourScene.unity
+    guid: 026033732c2438b40927a54d7652e672
   m_configObjects: {}
