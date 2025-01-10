@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Animations : MonoBehaviour
 {
     // Start is called before the first frame update
+
 
     Rigidbody2D rb;
     Animator Anim;

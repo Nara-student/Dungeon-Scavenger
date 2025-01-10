@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerCombat = FindAnyObjectByType<PlayerCombat>();
+        print(playerCombat);
     }
 
     // Update is called once per frame
