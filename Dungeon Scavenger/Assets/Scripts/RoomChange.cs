@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RoomChange : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int scene = 1;
+    
+    public GameObject enemyCounter;
+
+    public int stagedRoom;
+
+    //public int range1;
+    //public int range2;
+    //int randomRoom = Random.Range(range1, range2);
     void Start()
     {
         
@@ -15,14 +24,18 @@ public class RoomChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SceneManager.LoadScene(0);
+       
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-     if(collision.gameObject.name == "Player")
+   
+        //om playern nuddar dören när alla enemies är döda kommer den skickas rill nästa rum
+        if (collision.gameObject.name == "Player" && enemyCounter.transform.childCount == 0)
         {
-            SceneManager.LoadScene(scene);
+            SceneManager.LoadScene(stagedRoom);
 
         }
     }
