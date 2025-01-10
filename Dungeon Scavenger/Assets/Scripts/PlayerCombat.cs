@@ -5,35 +5,28 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     // Start is called before the first frame update
-    bool isEnemyNearby = false;
+    public bool isBlocking = false;
 
     public float parryTime = 0.5f;
     float time;
+
+    public float cooldown = 0.5f;
+    float attackCooldown;
 
     public float damage = 1;
     List <EnemyHealth> EHealth = new List<EnemyHealth>();
     void Start()
     {
         time = parryTime;
+        attackCooldown = cooldown;
     }
 
     // Update is called once per frame
     void Update()
     {
+        attackCooldown -= Time.deltaTime;
         Attack();
-
-
-        //parry
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            time -= Time.deltaTime;
-            print(time);
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            time = parryTime;
-        }
+        Block();
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,7 +35,6 @@ public class PlayerCombat : MonoBehaviour
         print("Entered");
         
 
-        isEnemyNearby = true;
 
         //Ifall scriptet finns inte
         if(eh == null)
@@ -55,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         EnemyHealth eh = (collision.gameObject.GetComponent<EnemyHealth>());
-        isEnemyNearby = false;
+        print("exit");
         
         if (eh == null)
         {
@@ -66,13 +58,14 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isEnemyNearby == true)
+        if (Input.GetKeyDown(KeyCode.F) && attackCooldown <= 0)
         {
             for(int i = 0; i < EHealth.Count; i++)
             {
                 EHealth[i].TakeDamage(damage);
             }
             print("Attacked");
+            attackCooldown = cooldown;
         }
     }
 
@@ -80,11 +73,25 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            isBlocking = true;
             //Parry
             if (time > 0)
             {
 
             }
+        }
+
+        //parry
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            time -= Time.deltaTime;
+            print(time);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            time = parryTime;
+            isBlocking = false;
         }
     }
 }

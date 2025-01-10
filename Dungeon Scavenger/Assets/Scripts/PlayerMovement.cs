@@ -10,9 +10,13 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float Speed = 1;
     public GameObject attackBox;
+    public float speedWhileBlocking = 0.5f;
+
+    PlayerCombat playerCombat;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerCombat = FindAnyObjectByType<PlayerCombat>();
     }
 
     // Update is called once per frame
@@ -33,8 +37,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            rb.velocity = new Vector2(0, Speed);
-            attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + 1);
+            if(playerCombat.isBlocking == true)
+            {
+                rb.velocity = new Vector2(0, speedWhileBlocking);
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, Speed);
+                attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + 1);
+            }
         }
     }
 
@@ -42,8 +53,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            rb.velocity = new Vector2(0, -Speed);
-            attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + -1);
+            if (playerCombat.isBlocking == true)
+            {
+                rb.velocity = new Vector2(0, -speedWhileBlocking);
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, -Speed);
+                attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + -1);
+            }
         }
     }
 
@@ -51,8 +69,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.velocity = new Vector2(-Speed, 0);
-            attackBox.transform.position = new Vector2(rb.transform.position.x + -1, rb.transform.position.y);
+            if (playerCombat.isBlocking == true)
+            {
+                rb.velocity = new Vector2(-speedWhileBlocking, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-Speed, 0);
+                attackBox.transform.position = new Vector2(rb.transform.position.x + -1, rb.transform.position.y);
+            }
         }
     }
 
@@ -60,8 +85,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            rb.velocity = new Vector2(Speed, 0);
-            attackBox.transform.position = new Vector2(rb.transform.position.x + 1, rb.transform.position.y);
+            if (playerCombat.isBlocking == true)
+            {
+                rb.velocity = new Vector2(speedWhileBlocking, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(Speed, 0);
+                attackBox.transform.position = new Vector2(rb.transform.position.x + 1, rb.transform.position.y);
+            }
         }
     }
 }
