@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool isBlocking = false;
+    bool canAttack = true;
 
     public float parryTime = 0.5f;
     float time;
@@ -58,7 +59,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.F) && attackCooldown <= 0)
+        if (Input.GetKeyDown(KeyCode.F) && attackCooldown <= 0 && canAttack == true)
         {
             for(int i = 0; i < EHealth.Count; i++)
             {
@@ -74,6 +75,7 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isBlocking = true;
+            canAttack = false;
             //Parry
             if (time > 0)
             {
@@ -85,13 +87,13 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             time -= Time.deltaTime;
-            print(time);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             time = parryTime;
             isBlocking = false;
+            canAttack = true;
         }
     }
 }
