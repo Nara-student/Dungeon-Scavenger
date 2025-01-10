@@ -6,7 +6,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
 {
     public GameObject target;
     public float cooldownDuration = 2f;
-    public float damageAmount = 1f;
+    public int damageAmount = 1;
 
     private bool isInTriggerDistance;
     private float cooldownTimer = 0f;
