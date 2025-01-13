@@ -56,11 +56,10 @@ public class EnemyMovementCombat : MonoBehaviour
         distanceStop = Vector2.Distance(transform.position, target.transform.position);
         //anim.Play("Idle Animation");
 
-<<<<<<< HEAD
         if (distanceStop >= distance)
-=======
+
         if (distanceStop >= 1.3)
->>>>>>> db2d7f0bbd78a2fa0fbd1b58c3cb0e33f82d8f97
+
         {
             Vector2 dir = target.transform.position - transform.position;
 
