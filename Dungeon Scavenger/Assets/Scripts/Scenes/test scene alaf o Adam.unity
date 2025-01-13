@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCounter: {fileID: 2044439083}
-  stagedRoom: 2
+  stagedRoom: 4
 --- !u!212 &692383480
 SpriteRenderer:
   m_ObjectHideFlags: 0
