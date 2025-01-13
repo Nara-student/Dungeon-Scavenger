@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour
     bool canAttack = true;
     public bool isParrying = false;
 
-    public float parryTime = 0.5f;
+    public float parryTime = 0.1f;
     float time;
 
     public float cooldown = 0.5f;
