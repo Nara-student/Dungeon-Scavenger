@@ -1,13 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.XR;
-using static UnityEngine.GraphicsBuffer;
 
-public class EnemyMovementCombat : MonoBehaviour
+public class OldEnemyMovement : MonoBehaviour
 {
-    public static EnemyMovementCombat instance;
+    public static OldEnemyMovement instance;
     public GameObject target;
     public float speed = 1.5f;
     public float distance = 1.5f;
