@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EnemyAttackMelee2 : MonoBehaviour
 {
+    //An extra Collider will be needed for this (See in AlmaTestScene)
+    //Has problems with animations (For later)
+
     public GameObject target;
     public float cooldownDuration = 2f;
-    public float damageAmount = 1f;
+    public int damageAmount = 1;
 
     private bool isInTriggerDistance;
     private float cooldownTimer = 0f;
     private Collider2D triggerCollider; //Collider to trigger attacker;
-
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
             {
                 damageTarget();
                 EnemyMovementCombat.instance.attackAnimation();
-                cooldownTimer = cooldownDuration; // Reset the cooldown timer
+                cooldownTimer = cooldownDuration; //s Reset the cooldown timer
             }
         }
     }
@@ -50,7 +52,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
 
     void damageTarget()
     {
-        print("works?");
+        print("PlayerTookDamage!");
         PlayerHealth.instance.PlayerTakesDamage(damageAmount);
     }
 }
