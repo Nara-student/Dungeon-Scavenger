@@ -44,7 +44,7 @@ public class TestBossMove : MonoBehaviour
 
             if (cooldownTimer <= 0)
             {
-                int randomAttack = Random.Range(1, 4);
+                int randomAttack = Random.Range(1, 2);
 
                 // Chooses randomly what attack to use
                 if (randomAttack == 1)
@@ -86,10 +86,12 @@ public class TestBossMove : MonoBehaviour
     {
         print("ATTACK ONE IS USED!");
         // Add attack behavior here
+        
     }
     void attackTwo()
     {
         print("ATTACK TWO IS USED!");
+        LargeAttack.instance.largeAttackBegins();
     }
 
     void attackThree()
