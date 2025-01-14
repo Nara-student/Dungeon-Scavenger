@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8687110}
   - component: {fileID: 8687111}
-  - component: {fileID: 8687113}
+  - component: {fileID: 8687112}
   m_Layer: 7
   m_Name: Attacker
   m_TagString: Untagged
@@ -191,7 +191,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 6
---- !u!114 &8687113
+--- !u!114 &8687112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8687109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b3b615a2ef1f04f83122ab1be08cd8, type: 3}
+  m_Script: {fileID: 11500000, guid: f1f32501e78ef504d9da1f3fc92ed48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1980928745}
@@ -218,8 +218,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1062520368}
   - component: {fileID: 1062520367}
-  - component: {fileID: 1062520366}
   - component: {fileID: 1062520365}
+  - component: {fileID: 1062520369}
   m_Layer: 7
   m_Name: EnemyLongAttack
   m_TagString: Untagged
@@ -262,21 +262,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 6
---- !u!114 &1062520366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062520364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ad80544a0ecc564a9d4033f4f0c4262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1980928745}
-  speed: 1
-  distance: 6
 --- !u!212 &1062520367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -345,6 +330,21 @@ Transform:
   - {fileID: 8687110}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1062520369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062520364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d563bff81b3b14642b6da61818bdc34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1980928745}
+  speed: 1.5
+  distance: 6
 --- !u!1 &1980928745
 GameObject:
   m_ObjectHideFlags: 0
