@@ -20,22 +20,19 @@ public class EnemyAttackMelee2 : MonoBehaviour
     float stunDuration = 5;
     float stunTimer;
 
-    public float attackDelay = 3f;
-    float Delay;
-
     PlayerCombat playerCombat;
+    EnemyMovementCombat enemyMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         triggerCollider = GetComponent<Collider2D>();
         playerCombat = FindAnyObjectByType<PlayerCombat>();
+        target = GameObject.Find("Player");
+        enemyMovement = transform.parent.GetComponent<EnemyMovementCombat>();
         
         //stunTimer
         stunTimer = stunDuration;
-        
-        //delay Timer
-        Delay = attackDelay;
     }
 
     // Update is called once per frame
@@ -61,12 +58,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
             isStunned = false;
             stunTimer = stunDuration;
         }
-        
-        //Delay
-        if(Delay > 0)
-        {
-            Delay -= Time.deltaTime;
-        }
+       
 
         if (isInTriggerDistance)
         {
@@ -80,15 +72,17 @@ public class EnemyAttackMelee2 : MonoBehaviour
             //attack
             if (cooldownTimer <= 0 && playerCombat.isBlocking == false && isStunned == false)
             {
-                EnemyMovementCombat.instance.attackAnimation();
+                enemyMovement.attackAnimation();
                 cooldownTimer = cooldownDuration; //s Reset the cooldown timer
-                Delay = attackDelay;
-                
-                damageTarget();
-                print("damage");
+
+                if(playerCombat.isBlocking == false && isStunned == false)
+                {
+                    Invoke("damageTarget", 0.5f);
+                    print("damage");
+                }
             }else if(cooldownTimer <= 0 && playerCombat.isBlocking == true)
             {
-                EnemyMovementCombat.instance.attackAnimation();
+                enemyMovement.attackAnimation();
                 cooldownTimer = cooldownDuration;
                 print("blocked");
             }

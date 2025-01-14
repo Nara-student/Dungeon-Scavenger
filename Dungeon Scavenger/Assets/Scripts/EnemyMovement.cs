@@ -40,6 +40,7 @@ public class EnemyMovementCombat : MonoBehaviour
         anim = GetComponent<Animator>();
         enemyAttack = attackBox.GetComponent<EnemyAttackMelee2>();
         enemyHealth = GetComponent<EnemyHealth>();
+        target = GameObject.Find("Player");
     }
 
 
@@ -52,6 +53,7 @@ public class EnemyMovementCombat : MonoBehaviour
         }
 
         isInTriggerDistance();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
