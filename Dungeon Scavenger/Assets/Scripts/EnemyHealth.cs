@@ -7,9 +7,11 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
 
     public float enemyHealth = 1;
+    Animator animator;
+    public bool isDead = false;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,9 @@ public class EnemyHealth : MonoBehaviour
         enemyHealth -= amount;
         if(enemyHealth <= 0)
         {
-            Destroy(gameObject);
+            isDead = true;
+            animator.Play("GoblinDeath");
+            Destroy(gameObject, 0.75f);
         }
     }
 }

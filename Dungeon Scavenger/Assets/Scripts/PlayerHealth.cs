@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public static PlayerHealth instance;
     public int maxHealth = 5;
     int health;
+    PlayerCombat playerCombat;
 
     private void Awake()
     {
@@ -17,15 +18,18 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        playerCombat = FindAnyObjectByType<PlayerCombat>();
     }
 
     public void PlayerTakesDamage(int damageAmount)
     {
-
-        health -= damageAmount;
-        if (health <= 0)
+        if(playerCombat.isBlocking == false)
         {
-            GameOver();
+            health -= damageAmount;
+            if (health <= 0)
+            {
+                GameOver();
+            }
         }
     }
 
