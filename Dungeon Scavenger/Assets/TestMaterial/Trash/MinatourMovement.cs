@@ -38,6 +38,8 @@ public class MinatourMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, rot + 90); //Moves head
         }
 
+
+
         // Reduce the cooldown timer over time
         if (cooldownTimer > 0)
         {
@@ -47,24 +49,14 @@ public class MinatourMovement : MonoBehaviour
         {
             int randomAttack = Random.Range(1, 2);
 
-            //Chooses randomly on what attack to use!
 
+            //Chooses randomly on what attack to use!
             if (randomAttack == 1)
             {
                 attackOne();
+                attackCooldown();
                 isInNormalMode = false;
-
-                if (attackTimer > 0)
-                {
-                    attackTimer -= Time.deltaTime;
-                }
-                if (attackTimer <= 0)
-                {
-                    print("Goes back to normal");
-                    isInNormalMode = true;
-                    cooldownTimer = cooldownDuration; //Resets the cooldown timer
-                    return;
-                }
+                return;
             }
             else if (randomAttack == 2)
             {
@@ -74,7 +66,30 @@ public class MinatourMovement : MonoBehaviour
             {
                 attackThree();
             }
+            return;
         }
+
+        void attackCooldown()
+        {
+            if (attackTimer > 0)
+            {
+                attackTimer -= Time.deltaTime;
+            }
+            if (attackTimer <= 0)
+            {
+                print("Goes back to normal");
+                isInNormalMode = true;
+                cooldownTimer = cooldownDuration; //Resets the cooldown timer
+                Update();
+                fixAttackTimer();
+                return;
+            }
+        }
+    }
+
+    void fixAttackTimer()
+    {
+        attackTimer = attackDuration;
     }
 
     void attackOne()
