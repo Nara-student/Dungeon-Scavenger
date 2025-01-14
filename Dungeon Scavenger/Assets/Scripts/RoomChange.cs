@@ -13,6 +13,8 @@ public class RoomChange : MonoBehaviour
 
     public int stagedRoom;
 
+
+
     //public int range1;
     //public int range2;
     //int randomRoom = Random.Range(range1, range2);
@@ -36,7 +38,6 @@ public class RoomChange : MonoBehaviour
         if (collision.gameObject.name == "Player" && enemyCounter.transform.childCount == 0)
         {
             SceneManager.LoadScene(stagedRoom);
-
         }
 
     }

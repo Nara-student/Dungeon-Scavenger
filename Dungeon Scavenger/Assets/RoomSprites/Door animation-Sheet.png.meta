@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 978f58e823be947409d09705ac33d87f
+guid: fa623b18d163ec04aa554a42aff639c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door animation -Sheet_0
+      name: Door animation-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e25a6558a3539e340bc071e3239fc073
-      internalID: 128057710
+      spriteID: 60fa391b80e83e04085a212b8d9d65d2
+      internalID: 1210459502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_1
+      name: Door animation-Sheet_1
       rect:
         serializedVersion: 2
         x: 37
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f731aefff66f1c42bb0acc47f02608e
-      internalID: -2140158935
+      spriteID: 3ca6f3b251d76b94596d115be5363491
+      internalID: 668816653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_2
+      name: Door animation-Sheet_2
       rect:
         serializedVersion: 2
         x: 74
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02346dfbb92d00642989db4d871b160f
-      internalID: -77954575
+      spriteID: 5ecc7987c15a78240b2f2dd718c08db9
+      internalID: 452171028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_3
+      name: Door animation-Sheet_3
       rect:
         serializedVersion: 2
         x: 111
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c89d003fa64c6cd42ae2ba2705b433a1
-      internalID: 1397602300
+      spriteID: 692f9c3d68067604390fb309a65843ac
+      internalID: -546326203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_4
+      name: Door animation-Sheet_4
       rect:
         serializedVersion: 2
         x: 148
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb8e80ebf1875e47a697e905e66d7df
-      internalID: 1788565152
+      spriteID: dd385f175ce80d74cbb686082988368d
+      internalID: -469120862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_5
+      name: Door animation-Sheet_5
       rect:
         serializedVersion: 2
         x: 185
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7549ab1421e19ac4aa3e98a5d70cc244
-      internalID: 936230590
+      spriteID: c5a0c680a795239479fb6abd0dd6cc46
+      internalID: -641447451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_6
+      name: Door animation-Sheet_6
       rect:
         serializedVersion: 2
         x: 222
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d77b084f4bdf26241aba43e59b9dd365
-      internalID: -786910159
+      spriteID: 22bb2d4f3be008a4a9a681d62ca94257
+      internalID: 1104384737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_7
+      name: Door animation-Sheet_7
       rect:
         serializedVersion: 2
         x: 259
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 015e7c3e37138864c98260bbec15ca3d
-      internalID: -315410223
+      spriteID: fa59dedd39a09a84bae6656b9dfd2165
+      internalID: 2096060294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_8
+      name: Door animation-Sheet_8
       rect:
         serializedVersion: 2
         x: 296
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5190b3740c5e85e478f1141afe5a3aa6
-      internalID: 225155005
+      spriteID: 64eefd8612a87cf41a6e3e573623cc5f
+      internalID: -1384039495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door animation -Sheet_9
+      name: Door animation-Sheet_9
       rect:
         serializedVersion: 2
         x: 333
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c99164d3218ba75458bf66bc38b861c3
-      internalID: -1083570684
+      spriteID: 81db908700aa94141b3547dd481b7da0
+      internalID: 944416337
       vertices: []
       indices: 
       edges: []
@@ -317,16 +317,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Door animation -Sheet_0: 128057710
-      Door animation -Sheet_1: -2140158935
-      Door animation -Sheet_2: -77954575
-      Door animation -Sheet_3: 1397602300
-      Door animation -Sheet_4: 1788565152
-      Door animation -Sheet_5: 936230590
-      Door animation -Sheet_6: -786910159
-      Door animation -Sheet_7: -315410223
-      Door animation -Sheet_8: 225155005
-      Door animation -Sheet_9: -1083570684
+      Door animation-Sheet_0: 1210459502
+      Door animation-Sheet_1: 668816653
+      Door animation-Sheet_2: 452171028
+      Door animation-Sheet_3: -546326203
+      Door animation-Sheet_4: -469120862
+      Door animation-Sheet_5: -641447451
+      Door animation-Sheet_6: 1104384737
+      Door animation-Sheet_7: 2096060294
+      Door animation-Sheet_8: -1384039495
+      Door animation-Sheet_9: 944416337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
