@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth instance;
     public int maxHealth = 5;
-    int health;
+    public int health;
     PlayerCombat playerCombat;
 
     private void Awake()
@@ -36,6 +36,6 @@ public class PlayerHealth : MonoBehaviour
     void GameOver()
     {
         Destroy(gameObject);
-       // SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene(4);
     }
 }

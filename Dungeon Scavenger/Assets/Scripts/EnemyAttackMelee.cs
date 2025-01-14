@@ -77,7 +77,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
 
                 if(playerCombat.isBlocking == false && isStunned == false)
                 {
-                    Invoke("damageTarget", 0.5f);
+                    Invoke("damageTarget", 0.4f);
                     print("damage");
                 }
             }else if(cooldownTimer <= 0 && playerCombat.isBlocking == true)
@@ -103,6 +103,8 @@ public class EnemyAttackMelee2 : MonoBehaviour
     {
         isInTriggerDistance = false;
     }
+
+ 
 
     void damageTarget()
     {
