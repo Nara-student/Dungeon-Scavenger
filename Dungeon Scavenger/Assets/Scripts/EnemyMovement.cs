@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.XR;
 using static UnityEngine.GraphicsBuffer;
@@ -102,18 +101,15 @@ public class EnemyMovementCombat : MonoBehaviour
             if (enemyAttack.isStunned == true && enemyHealth.isDead == false)
             {
                 rb.velocity = new Vector2(0, 0);
-                print("stunned");
                 StunDirection();
             }
             else if(enemyAttack.hasAttacked == false && enemyHealth.isDead == false)
             {
                 rb.velocity = dir.normalized * speed;
-                print("not attacked");
             }
             else
             {
                 rb.velocity = new Vector2(0, 0);
-                print("else");
             }
 
             MovementDirection();

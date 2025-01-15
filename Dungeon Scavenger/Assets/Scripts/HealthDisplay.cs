@@ -9,20 +9,18 @@ public class HealthDisplay : MonoBehaviour
 
     TextMeshProUGUI healthShow;
     int health;
-    PlayerHealth playerHealth;
 
     void Start()
     {
         healthShow = GetComponent<TextMeshProUGUI>();
-        playerHealth = FindAnyObjectByType<PlayerHealth>();
-        health = playerHealth.health;
+        health = PlayerHealth.health;
         healthShow.text = ("Health: " + health);
     }
 
     // Update is called once per frame
     void Update()
     {
-        health = playerHealth.health;
+        health = PlayerHealth.health;
         healthShow.text = ("Health: " + health);
     }
 }
