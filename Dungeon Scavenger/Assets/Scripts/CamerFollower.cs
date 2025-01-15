@@ -15,9 +15,15 @@ public class CamerFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 cameraPosition = player.transform.position + new Vector3(0, 0, -10);
-        cameraPosition.x = 0;
-        
-        transform.position = cameraPosition;
+        if (player.transform.position.y > -5 && player.transform.position.y < 5)
+        {
+
+            Vector3 cameraPosition = player.transform.position + new Vector3(0, 0, -10);
+            cameraPosition.x = 0;
+
+            transform.position = cameraPosition;
+        }
+       
+
     }
 }
