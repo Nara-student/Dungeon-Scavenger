@@ -1,23 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class HealSpawn : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject healOrb;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if(transform.childCount == 0)
         {
-            PlayerHealth.health = 5;
-            SceneManager.LoadScene(2);
+            GameObject healClone = Instantiate(healOrb, transform.position = new Vector2(0, 0), Quaternion.identity);
         }
     }
 }

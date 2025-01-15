@@ -75,11 +75,8 @@ public class EnemyAttackMelee2 : MonoBehaviour
                 enemyMovement.attackAnimation();
                 cooldownTimer = cooldownDuration; //s Reset the cooldown timer
 
-                if(playerCombat.isBlocking == false && isStunned == false)
-                {
-                    Invoke("damageTarget", 0.4f);
-                    print("damage");
-                }
+                Invoke("damageTarget", 0.3f);
+                print("damage");
             }else if(cooldownTimer <= 0 && playerCombat.isBlocking == true)
             {
                 enemyMovement.attackAnimation();
@@ -108,7 +105,10 @@ public class EnemyAttackMelee2 : MonoBehaviour
 
     void damageTarget()
     {
-        print("PlayerTookDamage!");
-        PlayerHealth.instance.PlayerTakesDamage(damageAmount);
+        if(playerCombat.isBlocking == false && isStunned == false && isInTriggerDistance == true)
+        {
+            print("PlayerTookDamage!");
+            PlayerHealth.instance.PlayerTakesDamage(damageAmount);
+        }
     }
 }

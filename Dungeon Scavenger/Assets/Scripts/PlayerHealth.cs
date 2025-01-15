@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth instance;
     public int maxHealth = 5;
-    public int health;
+    public static int health;
     PlayerCombat playerCombat;
 
     private void Awake()
@@ -37,5 +37,13 @@ public class PlayerHealth : MonoBehaviour
     {
         Destroy(gameObject);
         SceneManager.LoadScene(4);
+    }
+
+    public void PlayerTakeHeal()
+    {
+        if(health < maxHealth)
+        {
+            health += 1;
+        }
     }
 }
