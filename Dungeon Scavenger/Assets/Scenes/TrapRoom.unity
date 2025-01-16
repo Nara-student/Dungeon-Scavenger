@@ -1296,7 +1296,7 @@ PrefabInstance:
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
-      objectReference: {fileID: 1926252756}
+      objectReference: {fileID: 0}
     - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3115,7 +3115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7552134141162331122, guid: e230d2712167e3a4e9de965fd584db7a, type: 3}
       propertyPath: maxHealth
-      value: 100000000
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
