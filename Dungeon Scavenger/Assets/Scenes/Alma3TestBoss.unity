@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 296263616}
   - component: {fileID: 296263617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CracksOnFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 343790902}
   - component: {fileID: 343790900}
   - component: {fileID: 343790901}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boss(Different)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 582430756}
   - component: {fileID: 582430755}
   - component: {fileID: 582430758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 1251753482}
   - component: {fileID: 1251753481}
   - component: {fileID: 1251753485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LargeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
