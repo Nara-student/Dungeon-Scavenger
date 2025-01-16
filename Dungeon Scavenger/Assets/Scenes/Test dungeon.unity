@@ -122,6 +122,177 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &104038374
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+--- !u!1001 &205050945
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+--- !u!1001 &387967853
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1001 &489504772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,6 +350,120 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7537e7aa767d0844783f92d1065455ec, type: 3}
+--- !u!1001 &574156536
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+--- !u!1001 &810834413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1 &965058448
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +556,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &987297527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+--- !u!1001 &1304850924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1 &1659947487
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +738,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1679040301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1 &1790881933
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +826,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1868831416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+--- !u!1001 &1916114173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1001 &1948915624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,6 +997,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7537e7aa767d0844783f92d1065455ec, type: 3}
+--- !u!1001 &1965462321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1 &2019687436
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCounter: {fileID: 1790881933}
-  stagedRoom: 5
+  stagedRoom: 3
 --- !u!61 &2019687438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -572,6 +1199,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2094252302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747538428394950271, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
+      propertyPath: m_Name
+      value: TrapGoblin (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}
 --- !u!1001 &6399588536332613230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -804,3 +1488,15 @@ SceneRoots:
   - {fileID: 6399588536332613230}
   - {fileID: 2019687440}
   - {fileID: 1790881934}
+  - {fileID: 810834413}
+  - {fileID: 1304850924}
+  - {fileID: 205050945}
+  - {fileID: 1679040301}
+  - {fileID: 987297527}
+  - {fileID: 1965462321}
+  - {fileID: 387967853}
+  - {fileID: 1916114173}
+  - {fileID: 1868831416}
+  - {fileID: 2094252302}
+  - {fileID: 574156536}
+  - {fileID: 104038374}

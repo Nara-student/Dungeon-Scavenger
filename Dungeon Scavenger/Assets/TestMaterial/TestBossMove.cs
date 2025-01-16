@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 public class TestBossMove : MonoBehaviour
 {
+    public static TestBossMove instance;
+
     public int damageAmount = 1;
     public float cooldownDuration = 5f;
     public float attackDuration = 6f;
@@ -15,10 +18,16 @@ public class TestBossMove : MonoBehaviour
     private float cooldownTimer;
     private float attackTimer;
     private bool isInNormalMode;
+    private bool isBossAlive;
     private float distanceStop;
 
     private Rigidbody2D rb;
     private GameObject player;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -29,66 +38,74 @@ public class TestBossMove : MonoBehaviour
         attackTimer = attackDuration;
 
         isInNormalMode = true;
+        isBossAlive = true;
     }
 
     void Update()
     {
-        Vector3 direction = player.transform.position - transform.position;
-
-        if (isInNormalMode)
+        if (isBossAlive)
         {
-            // Rotate to face the player
-            float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+            Vector3 direction = player.transform.position - transform.position;
 
-            // follows the player slowly!
-            follow();
-        }
-
-        if (isInNormalMode)
-        {
-            // Reduce the cooldown timer over time
-            cooldownTimer -= Time.deltaTime;
-
-            if (cooldownTimer <= 0)
+            if (isInNormalMode)
             {
-                int randomAttack = Random.Range(1, 3);
+                // Rotate to face the player
+                float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0, rot + 90);
 
-                // Chooses randomly what attack to use
-                if (randomAttack == 1)
-                {
-                    attackOne();
-                    isInNormalMode = false; // Switches to attack mode
-                    attackTimer = attackDuration; // Resets the attack timer
-                }
-                else if (randomAttack == 2)
-                {
-                    attackTwo();
-                    isInNormalMode = false; // Switches to attack mode
-                    attackTimer = attackDuration; // Resets the attack timer
-                }
-                else if (randomAttack == 3)
-                {
-                    attackThree();
-                    isInNormalMode = false; // Switches to attack mode
-                    attackTimer = attackDuration; // Resets the attack timer
-                }
+                // follows the player slowly!
+                follow();
+            }
 
-                cooldownTimer = cooldownDuration; // Reset the cooldown timer
+            if (isInNormalMode)
+            {
+                // Reduce the cooldown timer over time
+                cooldownTimer -= Time.deltaTime;
+
+                if (cooldownTimer <= 0)
+                {
+                    int randomAttack = Random.Range(1, 3);
+
+                    // Chooses randomly what attack to use
+                    if (randomAttack == 1)
+                    {
+                        attackOne();
+                        isInNormalMode = false; // Switches to attack mode
+                        attackTimer = attackDuration; // Resets the attack timer
+                    }
+                    else if (randomAttack == 2)
+                    {
+                        attackTwo();
+                        isInNormalMode = false; // Switches to attack mode
+                        attackTimer = attackDuration; // Resets the attack timer
+                    }
+                    else if (randomAttack == 3)
+                    {
+                        attackThree();
+                        isInNormalMode = false; // Switches to attack mode
+                        attackTimer = attackDuration; // Resets the attack timer
+                    }
+
+                    cooldownTimer = cooldownDuration; // Reset the cooldown timer
+                }
+            }
+            else
+            {
+                // Handle attack mode
+                attackTimer -= Time.deltaTime;
+
+                if (attackTimer <= 0)
+                {
+                    print("Goes back to normal");
+                    AttackLarge.instance.largeAttackEnds();
+                    BossShockWaves.instance.shockWavesEnds();
+                    isInNormalMode = true; // Return to normal mode
+                }
             }
         }
         else
         {
-            // Handle attack mode
-            attackTimer -= Time.deltaTime;
-
-            if (attackTimer <= 0)
-            {
-                print("Goes back to normal");
-                AttackLarge.instance.largeAttackEnds();
-                BossShockWaves.instance.shockWavesEnds();
-                isInNormalMode = true; // Return to normal mode
-            }
+            print("BOSS DEAD");
         }
     }
 
@@ -121,5 +138,11 @@ public class TestBossMove : MonoBehaviour
     void attackThree()
     {
         print("ATTACK THREE IS USED!");
+    }
+
+
+    public void deathEnd()
+    {
+        isBossAlive = false;
     }
 }
