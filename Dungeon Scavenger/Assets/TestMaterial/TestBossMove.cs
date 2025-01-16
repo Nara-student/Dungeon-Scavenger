@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class TestBossMove : MonoBehaviour
 {
     public int damageAmount = 1;
     public float cooldownDuration = 5f;
-    public float attackDuration = 3f;
+    public float attackDuration = 6f;
+    public float distance = 2f;
+    public float speed = 0.3f;
 
     private float cooldownTimer;
     private float attackTimer;
     private bool isInNormalMode;
+    private float distanceStop;
 
     private Rigidbody2D rb;
     private GameObject player;
@@ -35,6 +40,9 @@ public class TestBossMove : MonoBehaviour
             // Rotate to face the player
             float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+
+            // follows the player slowly!
+            follow();
         }
 
         if (isInNormalMode)
@@ -44,7 +52,7 @@ public class TestBossMove : MonoBehaviour
 
             if (cooldownTimer <= 0)
             {
-                int randomAttack = Random.Range(1, 2);
+                int randomAttack = Random.Range(1, 3);
 
                 // Chooses randomly what attack to use
                 if (randomAttack == 1)
@@ -77,21 +85,37 @@ public class TestBossMove : MonoBehaviour
             if (attackTimer <= 0)
             {
                 print("Goes back to normal");
+                AttackLarge.instance.largeAttackEnds();
+                BossShockWaves.instance.shockWavesEnds();
                 isInNormalMode = true; // Return to normal mode
             }
+        }
+    }
+
+    void follow()
+    {
+        //Keeps from interlapping with target (Player)
+        distanceStop = Vector2.Distance(transform.position, player.transform.position);
+        // anim.Play("Idle Animation");
+
+        if (distanceStop >= distance)
+        {
+            //Makes the Enemy follow target (Player)
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            // anim.Play("Run Animation");
         }
     }
 
     void attackOne()
     {
         print("ATTACK ONE IS USED!");
-        // Add attack behavior here
-        
+        VisibleAttackRange.instance.largeAttackBegins();
     }
     void attackTwo()
     {
+        //Finished
         print("ATTACK TWO IS USED!");
-        LargeAttack.instance.largeAttackBegins();
+        BossShockWaves.instance.startShockWaves();
     }
 
     void attackThree()

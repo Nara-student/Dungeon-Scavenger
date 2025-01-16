@@ -15,7 +15,7 @@ public class PlayerCombat : MonoBehaviour
     public float cooldown = 0.5f;
     float attackCooldown;
 
-    public float damage = 1;
+    public int damage = 1;
     List <EnemyHealth> EHealth = new List<EnemyHealth>();
     void Start()
     {
@@ -66,6 +66,8 @@ public class PlayerCombat : MonoBehaviour
             {
                 EHealth[i].TakeDamage(damage);
             }
+            BossHealth.instance.takeDamage(damage);
+
             print("Attacked");
             attackCooldown = cooldown;
         }
