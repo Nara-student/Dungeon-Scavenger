@@ -14,6 +14,7 @@ public class BackToMainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //när man trycker soace kommer man tillbaka till main menu
         if (Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(0);

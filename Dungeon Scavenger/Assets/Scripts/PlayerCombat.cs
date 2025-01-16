@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     // Start is called before the first frame update
     public bool isBlocking = false;
     bool canAttack = true;
+    public bool holdingBlock = false;
     public bool isParrying = false;
 
     public float parryTime = 0.1f;
@@ -14,19 +15,31 @@ public class PlayerCombat : MonoBehaviour
 
     public float cooldown = 0.5f;
     float attackCooldown;
+    public bool isAttacking = false;
 
     public int damage = 1;
     List <EnemyHealth> EHealth = new List<EnemyHealth>();
+
+    Animator anim;
+    PlayerMovement playerMovement;
     void Start()
     {
         time = parryTime;
         attackCooldown = cooldown;
+        anim = transform.parent.GetComponent<Animator>();
+        playerMovement = transform.parent.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
         attackCooldown -= Time.deltaTime;
+        //attack bool end
+        if(attackCooldown < 0)
+        {
+            isAttacking = false;
+        }
+
         Attack();
         Block();
     }
@@ -70,6 +83,8 @@ public class PlayerCombat : MonoBehaviour
 
             print("Attacked");
             attackCooldown = cooldown;
+            AttackDirection();
+            isAttacking = true;
         }
     }
 
@@ -79,6 +94,8 @@ public class PlayerCombat : MonoBehaviour
         {
             isBlocking = true;
             canAttack = false;
+            holdingBlock = true;
+
             time -= Time.deltaTime;
             //Parry
             if (time > 0)
@@ -89,6 +106,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 isParrying = false;
             }
+            BlockDirection();
         }
 
         //Block exit
@@ -98,6 +116,55 @@ public class PlayerCombat : MonoBehaviour
             isBlocking = false;
             canAttack = true;
             isParrying = false;
+            holdingBlock = false;
+        }
+    }
+
+    void AttackDirection()
+    {
+        if (playerMovement.playerDirection == "Down")
+        {
+            //gå ner
+            anim.Play("PlayerAttackForward"); //Might need work for while damage
+        }
+        if (playerMovement.playerDirection == "Up")
+        {
+            //gå upp
+            anim.Play("PlayerAttackBackwards"); //Might need work for while damage
+        }
+        if (playerMovement.playerDirection == "Left")
+        {
+            //gå vänster
+            anim.Play("PlayerAttackLeft"); //Might need work for while damage
+        }
+        if (playerMovement.playerDirection == "Right")
+        {
+            //gå höger
+            anim.Play("PlayerAttackRight"); //Might need work for while damage
+        }
+    }
+
+    void BlockDirection()
+    {
+        if (playerMovement.playerDirection == "Down" && holdingBlock == true)
+        {
+            //gå ner
+            anim.Play("PlayerBlockForward"); //Might need work for while damage
+        }
+        if (playerMovement.playerDirection == "Up" && holdingBlock == true)
+        {
+            //gå upp
+            anim.Play("PlayerBlockBackwards"); //Might need work for while damage
+        }
+        if (playerMovement.playerDirection == "Left" && holdingBlock == true)
+        {
+            //gå vänster
+            anim.Play("PlayerBlockLeft"); //Might need work for while damage
+        }
+        if (playerMovement.playerDirection == "Right" && holdingBlock == true)
+        {
+            //gå höger
+            anim.Play("PlayerBlockRight"); //Might need work for while damage
         }
     }
 }

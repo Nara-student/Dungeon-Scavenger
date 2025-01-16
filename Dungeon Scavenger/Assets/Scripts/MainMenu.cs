@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            PlayerHealth.health = 5;
             SceneManager.LoadScene(2);
         }
     }
