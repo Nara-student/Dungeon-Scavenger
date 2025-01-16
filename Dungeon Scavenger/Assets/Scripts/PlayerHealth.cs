@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         health = maxHealth;
         playerCombat = FindAnyObjectByType<PlayerCombat>();
     }
