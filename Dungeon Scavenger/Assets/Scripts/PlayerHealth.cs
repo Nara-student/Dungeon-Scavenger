@@ -17,8 +17,17 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         health = maxHealth;
         playerCombat = FindAnyObjectByType<PlayerCombat>();
+    }
+
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void PlayerTakesDamage(int damageAmount)
@@ -32,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+
 
     void GameOver()
     {
