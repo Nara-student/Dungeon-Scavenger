@@ -30,6 +30,15 @@ public class BossHealth : MonoBehaviour
 
         currentHealth -= damage;
         healthbar.setHealth(currentHealth);
+        if(currentHealth <= 0)
+        {
+            death();
+        }
+    }
+
+    public void death()
+    {
+        TestBossMove.instance.deathEnd();
     }
 
     //for attacking boss BossHealth.instance.takeDamage(damage);
