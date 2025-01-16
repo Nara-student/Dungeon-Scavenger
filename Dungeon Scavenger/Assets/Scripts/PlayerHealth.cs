@@ -22,6 +22,14 @@ public class PlayerHealth : MonoBehaviour
         playerCombat = FindAnyObjectByType<PlayerCombat>();
     }
 
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void PlayerTakesDamage(int damageAmount)
     {
         if(playerCombat.isBlocking == false)
@@ -33,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+
 
     void GameOver()
     {
