@@ -6,6 +6,7 @@ public class HealSpawn : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject healOrb;
+    int healAmount = 0;
     void Start()
     {
         
@@ -14,9 +15,10 @@ public class HealSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.childCount == 0)
+        if(transform.childCount == 0 && healAmount == 0)
         {
             GameObject healClone = Instantiate(healOrb, transform.position = new Vector2(0, 0), Quaternion.identity);
+            healAmount++;
         }
     }
 }
