@@ -613,6 +613,10 @@ PrefabInstance:
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: stagedRoom
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 1436321976}
