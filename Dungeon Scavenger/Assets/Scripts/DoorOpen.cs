@@ -26,7 +26,7 @@ public class DoorOpen : MonoBehaviour
             print(isOpen);
         }
 
-        if(isOpen == true)
+        if (isOpen == true)
         {
             anim.Play("DoorOpening");
         }
