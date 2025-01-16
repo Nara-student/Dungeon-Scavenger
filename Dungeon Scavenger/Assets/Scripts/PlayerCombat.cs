@@ -17,7 +17,7 @@ public class PlayerCombat : MonoBehaviour
     float attackCooldown;
     public bool isAttacking = false;
 
-    public float damage = 1;
+    public int damage = 1;
     List <EnemyHealth> EHealth = new List<EnemyHealth>();
 
     Animator anim;
@@ -79,6 +79,8 @@ public class PlayerCombat : MonoBehaviour
             {
                 EHealth[i].TakeDamage(damage);
             }
+            BossHealth.instance.takeDamage(damage);
+
             print("Attacked");
             attackCooldown = cooldown;
             AttackDirection();

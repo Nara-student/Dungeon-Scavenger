@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             PlayerHealth.health = 5;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
 }
