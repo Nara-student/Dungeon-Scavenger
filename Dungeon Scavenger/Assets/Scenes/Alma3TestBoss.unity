@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1127153014}
-  damageAmount: 5
+  damageAmount: 2
 --- !u!1 &1579282216
 GameObject:
   m_ObjectHideFlags: 0
