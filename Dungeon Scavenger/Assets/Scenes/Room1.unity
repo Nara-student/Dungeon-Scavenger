@@ -495,6 +495,14 @@ PrefabInstance:
       value: Door (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: stagedRoom
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 1436321976}
+    - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 1436321976}
@@ -511,6 +519,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1485405171208364434, guid: e230d2712167e3a4e9de965fd584db7a, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1504166597496463948, guid: e230d2712167e3a4e9de965fd584db7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -614,9 +626,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: stagedRoom
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 1436321976}
+    - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 1436321976}
@@ -1045,6 +1061,14 @@ PrefabInstance:
       value: Door (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: stagedRoom
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 1436321976}
+    - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 1436321976}
