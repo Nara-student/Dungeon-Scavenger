@@ -34,7 +34,7 @@ public class AttackLarge : MonoBehaviour
         if(isAttackOn && isInAttackRange)
         {
             print("Player took damage!");
-            //PlayerHealth.instance.PlayerTakesDamage(damageAmount);
+            PlayerHealth.instance.PlayerTakesDamage(damageAmount);
             isAttackOn = false;
         }
     }
