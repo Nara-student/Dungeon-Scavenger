@@ -65,6 +65,8 @@ public class PlayerCombat : MonoBehaviour
     {
         EnemyHealth eh = (collision.gameObject.GetComponent<EnemyHealth>());
         print("exit");
+
+        bossHealth = null;
         
         if (eh == null)
         {
@@ -85,6 +87,7 @@ public class PlayerCombat : MonoBehaviour
             if(bossHealth != null)
             {
                 bossHealth.takeDamage(damage);
+                print("Boss");
             }
 
             print("Attacked");
