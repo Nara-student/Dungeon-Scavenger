@@ -19,6 +19,7 @@ public class PlayerCombat : MonoBehaviour
 
     public int damage = 1;
     List <EnemyHealth> EHealth = new List<EnemyHealth>();
+    BossHealth bossHealth;
 
     Animator anim;
     PlayerMovement playerMovement;
@@ -47,8 +48,8 @@ public class PlayerCombat : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyHealth eh = (collision.gameObject.GetComponent<EnemyHealth>());
-        print("Entered");
-        
+
+        bossHealth = collision.gameObject.GetComponent<BossHealth>();
 
 
         //Ifall scriptet finns inte
@@ -57,12 +58,15 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         EHealth.Add(eh);
+        print("Entered");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         EnemyHealth eh = (collision.gameObject.GetComponent<EnemyHealth>());
         print("exit");
+
+        bossHealth = null;
         
         if (eh == null)
         {
@@ -79,7 +83,12 @@ public class PlayerCombat : MonoBehaviour
             {
                 EHealth[i].TakeDamage(damage);
             }
-            BossHealth.instance.takeDamage(damage);
+
+            if(bossHealth != null)
+            {
+                bossHealth.takeDamage(damage);
+                print("Boss");
+            }
 
             print("Attacked");
             attackCooldown = cooldown;

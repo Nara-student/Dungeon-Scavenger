@@ -568,6 +568,10 @@ PrefabInstance:
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 2051069088}
+    - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 2051069088}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -736,7 +740,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 532502842, guid: f2f3a11b01d1e4549a78d1d0154274ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -911,6 +915,10 @@ PrefabInstance:
     - target: {fileID: 2626648018608160845, guid: f7ba135cea39ff448a62f966f9e9fc8c, type: 3}
       propertyPath: m_Name
       value: enemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581058201396343647, guid: f7ba135cea39ff448a62f966f9e9fc8c, type: 3}
+      propertyPath: maximumAmount
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

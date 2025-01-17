@@ -13,6 +13,8 @@ public class RoomChange : MonoBehaviour
 
     public int stagedRoom;
 
+    GameObject player;
+
 
 
     //public int range1;
@@ -20,7 +22,7 @@ public class RoomChange : MonoBehaviour
     //int randomRoom = Random.Range(range1, range2);
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class RoomChange : MonoBehaviour
         if (collision.gameObject.name == "Player" && enemyCounter.transform.childCount == 0)
         {
             SceneManager.LoadScene(stagedRoom);
+            player.transform.position = new Vector2(0, -4.5f);
         }
 
     }

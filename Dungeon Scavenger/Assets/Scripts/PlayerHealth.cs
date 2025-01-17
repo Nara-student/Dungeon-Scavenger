@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public static int health;
     PlayerCombat playerCombat;
 
+    //bool isInplace = false;
+
     private void Awake()
     {
         instance = this;
@@ -24,10 +26,16 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 3)
+        if(SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 9)
         {
             Destroy(gameObject);
         }
+
+        //if(SceneManager.GetActiveScene().buildIndex != 3 && isInplace == false)
+        //{
+            //transform.position = new Vector2(0, -4.5f);
+            //isInplace = true;
+        //}
     }
 
     public void PlayerTakesDamage(int damageAmount)
