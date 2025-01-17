@@ -593,9 +593,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: stagedRoom
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 1749595111}
+    - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 1749595111}
@@ -916,6 +920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 6581058201396343647, guid: f7ba135cea39ff448a62f966f9e9fc8c, type: 3}
+      propertyPath: maximumAmount
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1110,9 +1118,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: stagedRoom
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 1749595111}
+    - target: {fileID: 7281957988747378660, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
       value: 
       objectReference: {fileID: 1749595111}

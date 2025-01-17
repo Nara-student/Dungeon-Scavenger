@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
     void GameOver()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
     }
 
     public void PlayerTakeHeal()

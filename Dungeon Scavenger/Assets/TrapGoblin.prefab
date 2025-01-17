@@ -143,6 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498a6205007d1a344bdd6cf4526b07bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  cooldownDuration: 2
+  damageAmount: 1
+  isStunned: 0
+  hasAttacked: 0
 --- !u!1 &7747538428394950271
 GameObject:
   m_ObjectHideFlags: 0
