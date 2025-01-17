@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShockWaveProjectile : MonoBehaviour
 {
     public float forceOfProjectile = 1.5f;
-    public int damageAmount = 3;
+    public int damageAmount = 2;
     public float despawnTimer = 5f;
 
     private GameObject player;
@@ -37,7 +37,7 @@ public class ShockWaveProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("PlayerTookDamage!");
-        //PlayerHealth.instance.PlayerTakesDamage(damageAmount);
+        PlayerHealth.instance.PlayerTakesDamage(damageAmount);
         Destroy(gameObject);
     }
 }
