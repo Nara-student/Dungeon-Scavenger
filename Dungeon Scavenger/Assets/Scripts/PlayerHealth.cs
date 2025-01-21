@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 9)
+        if(SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 9 ||SceneManager.GetActiveScene().buildIndex == 11)
         {
             Destroy(gameObject);
         }

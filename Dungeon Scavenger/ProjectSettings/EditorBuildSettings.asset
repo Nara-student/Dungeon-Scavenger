@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrapRoom.unity
     guid: f4948599811f10e409eaf136c856a2fa
+  - enabled: 1
+    path: Assets/Scenes/ParkourScene 2.unity
+    guid: ef05c609cd4db46448c305eb0f2a225f
+  - enabled: 1
+    path: Assets/Scenes/WinRoom.unity
+    guid: 249929031343fb44a9fc9cf0d30e9960
   m_configObjects: {}

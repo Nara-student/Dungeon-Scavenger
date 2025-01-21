@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public float speedWhileBlocking = 0.5f;
     Animator anim;
 
-    AudioSource audio;
 
 
     PlayerCombat playerCombat;
@@ -24,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerCombat = FindAnyObjectByType<PlayerCombat>();
         anim = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
 
         if(anim == null)
         {
@@ -55,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(0, Speed);
                 attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + 1);
                 anim.Play("PlayerWalkBackwards");
-                audio.Play();
             }
 
             if(playerCombat.holdingBlock == false)
