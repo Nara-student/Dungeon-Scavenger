@@ -20,6 +20,7 @@ public class TestBossMove : MonoBehaviour
     private bool isInNormalMode;
     private bool isBossAlive;
     private float distanceStop;
+    private Animator anim;
 
     private Rigidbody2D rb;
     private GameObject player;
@@ -33,9 +34,11 @@ public class TestBossMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
 
         cooldownTimer = cooldownDuration;
         attackTimer = attackDuration;
+
 
         isInNormalMode = true;
         isBossAlive = true;
@@ -49,11 +52,9 @@ public class TestBossMove : MonoBehaviour
 
             if (isInNormalMode)
             {
-                // Rotate to face the player
-                float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(0, 0, rot + 90);
 
                 // follows the player slowly!
+                TargetDirection.instance.rotationOn();
                 follow();
             }
 
@@ -79,18 +80,15 @@ public class TestBossMove : MonoBehaviour
                         isInNormalMode = false; // Switches to attack mode
                         attackTimer = attackDuration; // Resets the attack timer
                     }
-                    else if (randomAttack == 3)
-                    {
-                        attackThree();
-                        isInNormalMode = false; // Switches to attack mode
-                        attackTimer = attackDuration; // Resets the attack timer
-                    }
 
                     cooldownTimer = cooldownDuration; // Reset the cooldown timer
                 }
             }
             else
             {
+                print("turning off rotation");
+                TargetDirection.instance.rotationOff();
+
                 // Handle attack mode
                 attackTimer -= Time.deltaTime;
 
@@ -109,18 +107,22 @@ public class TestBossMove : MonoBehaviour
         }
     }
 
+
     void follow()
     {
         //Keeps from interlapping with target (Player)
         distanceStop = Vector2.Distance(transform.position, player.transform.position);
-        // anim.Play("Idle Animation");
+        //BossAnimations.instance.RunAnim();
+        anim.Play("BossRunForward");
+        print("walk");
 
         if (distanceStop >= distance)
         {
             //Makes the Enemy follow target (Player)
+            BossAnimations.instance.IdleAnim();
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-            // anim.Play("Run Animation");
         }
+
     }
 
     void attackOne()
@@ -134,12 +136,6 @@ public class TestBossMove : MonoBehaviour
         print("ATTACK TWO IS USED!");
         BossShockWaves.instance.startShockWaves();
     }
-
-    void attackThree()
-    {
-        print("ATTACK THREE IS USED!");
-    }
-
 
     public void deathEnd()
     {

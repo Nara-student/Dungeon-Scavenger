@@ -33,6 +33,7 @@ public class AttackLarge : MonoBehaviour
     {
         if(isAttackOn && isInAttackRange)
         {
+            BossAnimations.instance.SlamAnim();
             print("Player took damage!");
             PlayerHealth.instance.PlayerTakesDamage(damageAmount);
             isAttackOn = false;

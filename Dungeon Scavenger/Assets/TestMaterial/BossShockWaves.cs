@@ -40,6 +40,7 @@ public class BossShockWaves : MonoBehaviour
             if (cooldownTimer <= 0)
             {
                 shootProjectile();
+                BossAnimations.instance.SwingAnim();
                 // EnemyMovementCombat.instance.attackAnimation();
                 cooldownTimer = cooldownDuration; // Resets the cooldown timer
             }
