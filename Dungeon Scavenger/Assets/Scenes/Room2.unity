@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: stagedRoom
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
@@ -858,6 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3148935297713745318, guid: e230d2712167e3a4e9de965fd584db7a, type: 3}
+  enemyCounter: {fileID: 145313354}
 --- !u!1 &2022001824
 GameObject:
   m_ObjectHideFlags: 0
