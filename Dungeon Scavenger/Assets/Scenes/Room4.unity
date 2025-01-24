@@ -687,6 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3148935297713745318, guid: e230d2712167e3a4e9de965fd584db7a, type: 3}
+  enemyCounter: {fileID: 2051069088}
 --- !u!1 &1520341664
 GameObject:
   m_ObjectHideFlags: 0

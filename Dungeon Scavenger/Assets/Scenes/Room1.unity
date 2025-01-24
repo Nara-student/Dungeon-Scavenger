@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1533211698}
+  enemyCounter: {fileID: 1436321976}
 --- !u!1 &434147623
 GameObject:
   m_ObjectHideFlags: 0
