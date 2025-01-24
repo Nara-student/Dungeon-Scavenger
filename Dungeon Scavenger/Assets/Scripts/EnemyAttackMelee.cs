@@ -17,11 +17,12 @@ public class EnemyAttackMelee2 : MonoBehaviour
     private float cooldownTimer = 0f;
     private Collider2D triggerCollider; //Collider to trigger attacker;
 
-    float stunDuration = 5;
+    public float stunDuration = 5;
     float stunTimer;
 
     PlayerCombat playerCombat;
     EnemyMovementCombat enemyMovement;
+    EnemyHealth enemyHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
         playerCombat = FindAnyObjectByType<PlayerCombat>();
         target = GameObject.Find("Player");
         enemyMovement = transform.parent.GetComponent<EnemyMovementCombat>();
+        enemyHealth = transform.parent.GetComponent<EnemyHealth>();
         
         //stunTimer
         stunTimer = stunDuration;
@@ -105,7 +107,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
 
     void damageTarget()
     {
-        if(playerCombat.isBlocking == false && isStunned == false && isInTriggerDistance == true)
+        if(playerCombat.isBlocking == false && isStunned == false && isInTriggerDistance == true && enemyHealth.isDead == false)
         {
             print("PlayerTookDamage!");
             PlayerHealth.instance.PlayerTakesDamage(damageAmount);

@@ -20,7 +20,15 @@ public class SpikeKIll : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene(6);
+        PlayerParkourHealth playerHealth = collision.gameObject.GetComponent<PlayerParkourHealth>();
+
+
+        //if(playerHealth == null)
+        {
+            //return;
+        }
+
+        playerHealth.Health();
     }
 
 }

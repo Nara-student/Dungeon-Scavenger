@@ -9,6 +9,9 @@ public class EnemyHealth : MonoBehaviour
     public float enemyHealth = 1;
     Animator animator;
     public bool isDead = false;
+
+    public string deathAnimation;
+    public float deathTime;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -26,8 +29,8 @@ public class EnemyHealth : MonoBehaviour
         if(enemyHealth <= 0)
         {
             isDead = true;
-            animator.Play("GoblinDeath");
-            Destroy(gameObject, 0.75f);
+            animator.Play(deathAnimation);
+            Destroy(gameObject, deathTime);
         }
     }
 }

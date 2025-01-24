@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ParkourMovement : MonoBehaviour
 {
@@ -12,14 +13,20 @@ public class ParkourMovement : MonoBehaviour
     Rigidbody2D Rb;
     Animator anim;
     SpriteRenderer sprite;
-    
+    bool canFly = true;
+    bool isJumping = false;
 
+    BoxCollider2D collider;
+
+    PlayerParkourHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        playerHealth = GetComponent<PlayerParkourHealth>();
+        collider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -27,21 +34,29 @@ public class ParkourMovement : MonoBehaviour
     {
 
         
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && playerHealth.isDead == false)
         {
             Rb.velocity = new Vector2(-Speed, Rb.velocity.y);
-            anim.Play("PlayerWalkRight");
-            sprite.flipX = true;
-        }
-
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            Rb.velocity = new Vector2(Speed, Rb.velocity.y);
-            anim.Play("PlayerWalkRight");
+            
+            if(isJumping == false)
+            {
+                anim.Play("PlayerWalkLeft");
+            }
             sprite.flipX = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) && playerHealth.isDead == false)
+        {
+            Rb.velocity = new Vector2(Speed, Rb.velocity.y);
+            
+            if (isJumping == false)
+            {
+                anim.Play("PlayerWalkLeft");
+            }
+            sprite.flipX = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && playerHealth.isDead == false)
         {
             Jump();
 
@@ -49,9 +64,18 @@ public class ParkourMovement : MonoBehaviour
           
         }
 
-        if(Rb.velocity.x == 0 && Rb.velocity.y == 0)
+        if(Rb.velocity.x == 0 && Rb.velocity.y == 0 && playerHealth.isDead == false)
         {
             anim.Play("PlayerIdle");
+        }
+
+        if(playerHealth.isDead == true && canFly == true)
+        {
+            Rb.velocity = new Vector2(0, 10);
+            Rb.gravityScale = 5;
+            collider.isTrigger = true;
+            Invoke("Death", 0.1f);
+            Invoke("GameOver", 1);
         }
 
     }
@@ -64,12 +88,25 @@ public class ParkourMovement : MonoBehaviour
         if (jumpCount <= 2)
         {
             Rb.velocity = new Vector2(Rb.velocity.x, 5);
+            anim.Play("PlayerJump");
+            isJumping = true;
         }
+    }
+
+    void Death()
+    {
+        canFly = false;
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene(6);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         jumpCount = 0;
+        isJumping = false;
     }
 
 }
