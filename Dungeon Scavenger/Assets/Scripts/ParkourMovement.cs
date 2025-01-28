@@ -16,7 +16,7 @@ public class ParkourMovement : MonoBehaviour
     bool canFly = true;
     bool isJumping = false;
 
-    BoxCollider2D collider;
+    CapsuleCollider2D capsuleCollider;
 
     PlayerParkourHealth playerHealth;
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class ParkourMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         playerHealth = GetComponent<PlayerParkourHealth>();
-        collider = GetComponent<BoxCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -73,7 +73,7 @@ public class ParkourMovement : MonoBehaviour
         {
             Rb.velocity = new Vector2(0, 10);
             Rb.gravityScale = 5;
-            collider.isTrigger = true;
+            capsuleCollider.enabled = false;
             Invoke("Death", 0.1f);
             Invoke("GameOver", 1);
         }

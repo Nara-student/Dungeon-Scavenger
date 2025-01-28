@@ -22,12 +22,6 @@ public class SpikeKIll : MonoBehaviour
     {
         PlayerParkourHealth playerHealth = collision.gameObject.GetComponent<PlayerParkourHealth>();
 
-
-        //if(playerHealth == null)
-        {
-            //return;
-        }
-
         playerHealth.Health();
     }
 

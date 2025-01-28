@@ -2692,6 +2692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  enemyCounter: {fileID: 1926252756}
 --- !u!4 &929133973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2649667246684798928, guid: 44d20538b63e4694d89ae5d40402bcd5, type: 3}

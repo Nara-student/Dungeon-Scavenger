@@ -23,9 +23,4 @@ public class PlayerParkourHealth : MonoBehaviour
         isDead = true;
         print("Dead");
     }
-
-    public void GameOver()
-    {
-        SceneManager.LoadScene(6);
-    }
 }
