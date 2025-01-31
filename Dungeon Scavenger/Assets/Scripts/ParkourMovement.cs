@@ -74,6 +74,7 @@ public class ParkourMovement : MonoBehaviour
             Rb.velocity = new Vector2(0, 10);
             Rb.gravityScale = 5;
             capsuleCollider.enabled = false;
+            anim.Play("PlayerDeath");
             Invoke("Death", 0.1f);
             Invoke("GameOver", 1);
         }
