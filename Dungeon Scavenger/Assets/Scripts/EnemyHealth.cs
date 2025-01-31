@@ -51,7 +51,9 @@ public class EnemyHealth : MonoBehaviour
 
     void AfterDeath()
     {
+        float randomSize = Random.Range(0.5f, 1f);
         GameObject deathDropClone = Instantiate(deathDrop, transform.position, Quaternion.identity);
+        deathDropClone.transform.localScale = new Vector2(randomSize, randomSize);
     }
 
     void Revive()
