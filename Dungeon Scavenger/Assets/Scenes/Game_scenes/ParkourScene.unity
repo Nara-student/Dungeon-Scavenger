@@ -7180,6 +7180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  jumpSound: {fileID: 5448858425185369057, guid: 05f02c91d59d4ec4dadd98b213f2ba35, type: 3}
 --- !u!212 &970322827
 SpriteRenderer:
   m_ObjectHideFlags: 0
