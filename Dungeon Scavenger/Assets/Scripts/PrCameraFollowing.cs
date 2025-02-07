@@ -11,12 +11,18 @@ public class PrCameraFollowing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         playerHealth = FindAnyObjectByType<PlayerParkourHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(playerHealth == null)
+        {
+            return;
+        }
+
         if(playerHealth.isDead == false)
         {
             Vector3 cameraPosition = player.transform.position + new Vector3(0, 0, -10);

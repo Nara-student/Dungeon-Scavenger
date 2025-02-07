@@ -52,12 +52,21 @@ public class EnemyHealth : MonoBehaviour
     void AfterDeath()
     {
         float randomSize = Random.Range(0.5f, 1f);
+
+        if(deathDrop == null)
+        {
+            return;
+        }
         GameObject deathDropClone = Instantiate(deathDrop, transform.position, Quaternion.identity);
         deathDropClone.transform.localScale = new Vector2(randomSize, randomSize);
     }
 
     void Revive()
     {
+        if (deathDrop == null)
+        {
+            return;
+        }
         GameObject deathDropClone = Instantiate(deathDrop, transform.position, Quaternion.identity, transform.parent.transform);
     }
 }

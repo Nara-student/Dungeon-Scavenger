@@ -12,6 +12,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
     public int damageAmount = 1;
     public bool isStunned = false;
     public bool hasAttacked = false;
+    public float damageDelay = 0.3f;
 
     private bool isInTriggerDistance;
     private float cooldownTimer = 0f;
@@ -77,7 +78,7 @@ public class EnemyAttackMelee2 : MonoBehaviour
                 enemyMovement.attackAnimation();
                 cooldownTimer = cooldownDuration; //s Reset the cooldown timer
 
-                Invoke("damageTarget", 0.3f);
+                Invoke("damageTarget", damageDelay);
                 print("damage");
             }else if(cooldownTimer <= 0 && playerCombat.isBlocking == true)
             {

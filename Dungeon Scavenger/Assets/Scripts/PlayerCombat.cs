@@ -21,6 +21,7 @@ public class PlayerCombat : MonoBehaviour
     List <EnemyHealth> EHealth = new List<EnemyHealth>();
     BossHealth bossHealth;
 
+    Animator slashAnim;
     Animator anim;
     PlayerMovement playerMovement;
     void Start()
@@ -29,6 +30,7 @@ public class PlayerCombat : MonoBehaviour
         attackCooldown = cooldown;
         anim = transform.parent.GetComponent<Animator>();
         playerMovement = transform.parent.GetComponent<PlayerMovement>();
+        slashAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -135,21 +137,25 @@ public class PlayerCombat : MonoBehaviour
         {
             //gå ner
             anim.Play("PlayerAttackForward"); //Might need work for while damage
+            slashAnim.Play("ForwardsSlash");
         }
         if (playerMovement.playerDirection == "Up")
         {
             //gå upp
             anim.Play("PlayerAttackBackwards"); //Might need work for while damage
+            slashAnim.Play("BackwardsSlash");
         }
         if (playerMovement.playerDirection == "Left")
         {
             //gå vänster
             anim.Play("PlayerAttackLeft"); //Might need work for while damage
+            slashAnim.Play("LeftSlash");
         }
         if (playerMovement.playerDirection == "Right")
         {
             //gå höger
             anim.Play("PlayerAttackRight"); //Might need work for while damage
+            slashAnim.Play("RightSlash");
         }
     }
 
