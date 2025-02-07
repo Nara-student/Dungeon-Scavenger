@@ -10,6 +10,7 @@ public class VisibleAttackRange : MonoBehaviour
     private SpriteRenderer visibleattackRange;
     private float visibilityTime;
     private bool attackIsGoing;
+    private Animator anim;
    
 
     private void Awake()
@@ -19,6 +20,7 @@ public class VisibleAttackRange : MonoBehaviour
     void Start()
     {
         visibleattackRange = GetComponent<SpriteRenderer>();
+        anim = GetComponentInParent<Animator>();
         visibleattackRange.enabled = false;
     }
     void Update()
@@ -28,10 +30,12 @@ public class VisibleAttackRange : MonoBehaviour
             visibleattackRange.enabled = true;
             if (visibilityTime > 0)
             {
+                anim.Play("BeforeSlam");
                 visibilityTime -= Time.deltaTime;
             }
             if (visibilityTime <= 0)
             {
+                anim.Play("BossSlam");
                 AttackLarge.instance.getReadyForAttack();
                 attackIsGoing = false;
             }

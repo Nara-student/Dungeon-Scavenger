@@ -11,15 +11,23 @@ public class TestBossMove : MonoBehaviour
 
     public int damageAmount = 1;
     public float cooldownDuration = 5f;
+    public float meleeCooldownDuration = 1f;
     public float attackDuration = 6f;
-    public float distance = 2f;
+    public float distance = 3f;
     public float speed = 0.3f;
 
+    private float meleeTimer;
     private float cooldownTimer;
     private float attackTimer;
     private bool isInNormalMode;
     private bool isBossAlive;
     private float distanceStop;
+    private Animator anim;
+    
+    //Melee Attack
+    private bool isInRange;
+    private bool isNotInAttack;
+    private bool isDoneAttack;
 
     private Rigidbody2D rb;
     private GameObject player;
@@ -33,12 +41,16 @@ public class TestBossMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
 
         cooldownTimer = cooldownDuration;
         attackTimer = attackDuration;
+        meleeTimer = meleeCooldownDuration;
+
 
         isInNormalMode = true;
         isBossAlive = true;
+        isDoneAttack = true;
     }
 
     void Update()
@@ -49,11 +61,9 @@ public class TestBossMove : MonoBehaviour
 
             if (isInNormalMode)
             {
-                // Rotate to face the player
-                float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(0, 0, rot + 90);
 
                 // follows the player slowly!
+                TargetDirection.instance.rotationOn();
                 follow();
             }
 
@@ -61,27 +71,23 @@ public class TestBossMove : MonoBehaviour
             {
                 // Reduce the cooldown timer over time
                 cooldownTimer -= Time.deltaTime;
+                isNotInAttack = true;
 
                 if (cooldownTimer <= 0)
                 {
-                    int randomAttack = Random.Range(1, 3);
+                    int randomAttack = Random.Range(1, 4);
+                    isNotInAttack = false;
 
                     // Chooses randomly what attack to use
-                    if (randomAttack == 1)
+                    if (randomAttack == 1 || randomAttack == 2)
                     {
                         attackOne();
                         isInNormalMode = false; // Switches to attack mode
                         attackTimer = attackDuration; // Resets the attack timer
                     }
-                    else if (randomAttack == 2)
-                    {
-                        attackTwo();
-                        isInNormalMode = false; // Switches to attack mode
-                        attackTimer = attackDuration; // Resets the attack timer
-                    }
                     else if (randomAttack == 3)
                     {
-                        attackThree();
+                        attackTwo();
                         isInNormalMode = false; // Switches to attack mode
                         attackTimer = attackDuration; // Resets the attack timer
                     }
@@ -91,6 +97,9 @@ public class TestBossMove : MonoBehaviour
             }
             else
             {
+                print("turning off rotation");
+                TargetDirection.instance.rotationOff();
+
                 // Handle attack mode
                 attackTimer -= Time.deltaTime;
 
@@ -102,6 +111,24 @@ public class TestBossMove : MonoBehaviour
                     isInNormalMode = true; // Return to normal mode
                 }
             }
+
+            if (isInRange && isNotInAttack)
+            {
+                print("Start attack?");
+                if (meleeTimer > 0)
+                {
+                    meleeTimer -= Time.deltaTime;
+                    
+                }
+                if (meleeTimer <= 0)
+                {
+                    attackMelee();
+                    isDoneAttack = false;
+                    meleeTimer = meleeCooldownDuration; // Resets the cooldown timer for melee
+                    isDoneAttack = true;
+                }
+            }
+
         }
         else
         {
@@ -109,40 +136,65 @@ public class TestBossMove : MonoBehaviour
         }
     }
 
+
     void follow()
     {
         //Keeps from interlapping with target (Player)
         distanceStop = Vector2.Distance(transform.position, player.transform.position);
-        // anim.Play("Idle Animation");
+        //BossAnimations.instance.RunAnim();
+        print("walk");
 
         if (distanceStop >= distance)
         {
             //Makes the Enemy follow target (Player)
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-            // anim.Play("Run Animation");
+            anim.Play("BossRun");
+            meleeTimer = meleeCooldownDuration;
+            isInRange = false;
         }
+        else if( distanceStop < distance)
+        {
+            //When in distance with target
+            isInRange = true;
+        }
+
+
+
     }
 
     void attackOne()
     {
         print("ATTACK ONE IS USED!");
+        anim.Play("BossSlam");
         VisibleAttackRange.instance.largeAttackBegins();
     }
     void attackTwo()
     {
         //Finished
         print("ATTACK TWO IS USED!");
+       
         BossShockWaves.instance.startShockWaves();
     }
-
-    void attackThree()
+    void attackMelee()
     {
-        print("ATTACK THREE IS USED!");
-    }
+        anim.Play("BossSwing");
 
+        if (isDoneAttack)
+        {
+            PlayerHealth.instance.PlayerTakesDamage(damageAmount);
+            print("AttacK!");
+        }
+    }
 
     public void deathEnd()
     {
         isBossAlive = false;
+        anim.Play("BossDeath");
+        //Destroy(gameObject);
     }
+
+
+
+
+
 }

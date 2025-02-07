@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab91da043786f7d44948a71b00ff5760
+guid: 9f23116f386ad4c4d99014bc2b3f62e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JanTest_0
+      name: NewBossSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
+        y: 176
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 251eb9df379627c499663db6d4e04b22
-      internalID: -1740917599
+      spriteID: 8f736c63e7dce524093d4a4a0ff44dad
+      internalID: 400196310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_1
+      name: NewBossSheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 128
+        y: 176
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2c394c87a2bca449bc338ba3ff1b5ba
-      internalID: -937506834
+      spriteID: 217843e061178534d9e004ee60d02e55
+      internalID: -2023772773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_2
+      name: NewBossSheet_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
+        x: 256
+        y: 176
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c44a973d7d55347bbeb576361a583e
-      internalID: -24331036
+      spriteID: 7dd6565d88c9f1f488fe023baa55bfb5
+      internalID: -490400919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_3
+      name: NewBossSheet_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
+        x: 384
+        y: 176
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc42e93abe8e4c4985dc30d68c4a1a8
-      internalID: -1763267668
+      spriteID: 441f65360f719ba41a928bc248966c7d
+      internalID: -282924779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_4
+      name: NewBossSheet_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
+        x: 512
+        y: 176
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8422efdb1133048499b6ee9015f2eede
-      internalID: 527872029
+      spriteID: 62a10205634cad44eb448fac0ea96953
+      internalID: -1831277458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_5
+      name: NewBossSheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 176
+        width: 128
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5000957acb78a8047bf53eaae1fcace8
+      internalID: 449773448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewBossSheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 176
+        width: 128
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db51c1a1a021f6b498ccec9b9a38f95f
+      internalID: -1694817969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewBossSheet_7
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e3418078d34aa54e81cffdc20b4d7a3
-      internalID: 1173730342
+      spriteID: 084c88394b6f59a44ae444a57d3219b0
+      internalID: -1675109929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_6
+      name: NewBossSheet_8
       rect:
         serializedVersion: 2
-        x: 16
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd711c9adc1106a469d2f8fe6c3092eb
-      internalID: -482187958
+      spriteID: 1161714104bf6434a95a191f3495ae6f
+      internalID: -881193276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_7
+      name: NewBossSheet_9
       rect:
         serializedVersion: 2
-        x: 32
+        x: 256
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75682600f9c3401479441e637a61b861
-      internalID: 1127085040
+      spriteID: 7e3452150874a874594a32b16b4d3d3f
+      internalID: 582069204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_8
+      name: NewBossSheet_10
       rect:
         serializedVersion: 2
-        x: 48
+        x: 384
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfd7f087004eff4cbaf66251693827d
-      internalID: 95753021
+      spriteID: 6dbeed65a28c34c4da4e3d01da697cb0
+      internalID: 405913880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JanTest_9
+      name: NewBossSheet_11
       rect:
         serializedVersion: 2
-        x: 64
+        x: 512
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +355,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5184fbc53c15781498d673ad6ef20c0e
-      internalID: 2037136929
+      spriteID: e01f5e8edaa158c428a0232abe065baa
+      internalID: 160813010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewBossSheet_12
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fd993ebe413f845b3df9da2841032c
+      internalID: 165640491
       vertices: []
       indices: 
       edges: []
@@ -330,16 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      JanTest_0: -1740917599
-      JanTest_1: -937506834
-      JanTest_2: -24331036
-      JanTest_3: -1763267668
-      JanTest_4: 527872029
-      JanTest_5: 1173730342
-      JanTest_6: -482187958
-      JanTest_7: 1127085040
-      JanTest_8: 95753021
-      JanTest_9: 2037136929
+      NewBossSheet_0: 400196310
+      NewBossSheet_1: -2023772773
+      NewBossSheet_10: 405913880
+      NewBossSheet_11: 160813010
+      NewBossSheet_12: 165640491
+      NewBossSheet_2: -490400919
+      NewBossSheet_3: -282924779
+      NewBossSheet_4: -1831277458
+      NewBossSheet_5: 449773448
+      NewBossSheet_6: -1694817969
+      NewBossSheet_7: -1675109929
+      NewBossSheet_8: -881193276
+      NewBossSheet_9: 582069204
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
