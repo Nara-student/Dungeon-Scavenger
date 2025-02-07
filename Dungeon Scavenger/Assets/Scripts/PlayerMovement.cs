@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject attackBox;
     public float speedWhileBlocking = 0.5f;
     Animator anim;
-
+    AudioSource walkSound;
 
 
     PlayerCombat playerCombat;
@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+
+        walkSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
 
         Movement();
+
+
     }
 
     void Movement()
@@ -59,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerDirection = "Up";
             }
+
+            walkSound.mute = false;
         }
         //MoveDown
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
@@ -77,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerDirection = "Down";
             }
+            walkSound.mute = false;
         }
         //MoveLeft
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -95,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerDirection = "Left";
             }
+            walkSound.mute = false;
         }
         //MoveRight
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -113,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerDirection = "Right";
             }
+            walkSound.mute = false;
         }
         else
         {
@@ -120,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.Play("PlayerIdle");
             }
+            walkSound.mute = true;
         }
     }
 }
