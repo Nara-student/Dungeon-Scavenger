@@ -75,17 +75,17 @@ public class TestBossMove : MonoBehaviour
 
                 if (cooldownTimer <= 0)
                 {
-                    int randomAttack = Random.Range(3, 3);
+                    int randomAttack = Random.Range(1, 4);
                     isNotInAttack = false;
 
                     // Chooses randomly what attack to use
-                    if (randomAttack == 1)
+                    if (randomAttack == 1 || randomAttack == 2)
                     {
                         attackOne();
                         isInNormalMode = false; // Switches to attack mode
                         attackTimer = attackDuration; // Resets the attack timer
                     }
-                    else if (randomAttack == 2)
+                    else if (randomAttack == 3)
                     {
                         attackTwo();
                         isInNormalMode = false; // Switches to attack mode
@@ -118,17 +118,14 @@ public class TestBossMove : MonoBehaviour
                 if (meleeTimer > 0)
                 {
                     meleeTimer -= Time.deltaTime;
-                    anim.Play("BossIdle");
+                    
                 }
-                if (meleeTimer <= 1)
+                if (meleeTimer <= 0)
                 {
                     attackMelee();
                     isDoneAttack = false;
-                    if(meleeTimer <= 0)
-                    {
-                       meleeTimer = meleeCooldownDuration; // Resets the cooldown timer for melee
-                        isDoneAttack = true;
-                    }
+                    meleeTimer = meleeCooldownDuration; // Resets the cooldown timer for melee
+                    isDoneAttack = true;
                 }
             }
 
