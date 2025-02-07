@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 public class DoorOpen : MonoBehaviour
 {
     Animator anim;
-    EnemySpawner enemyCounter;
+    public GameObject enemyCounter;
     bool isOpen = false;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        enemyCounter = FindAnyObjectByType<EnemySpawner>();
         isOpen = false;
     }
 

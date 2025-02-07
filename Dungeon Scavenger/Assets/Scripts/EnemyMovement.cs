@@ -27,6 +27,24 @@ public class EnemyMovementCombat : MonoBehaviour
 
     string direction;
 
+    [Header("WalkAnimations")]
+    public string forwardWalk;
+    public string backwardsWalk;
+    public string leftWalk;
+    public string RightWalk;
+
+    [Header("AttackAnimations")]
+    public string forwardAttack;
+    public string backwardsAttack;
+    public string leftAttack;
+    public string rightAttack;
+
+    [Header("StunAnimations")]
+    public string forwardStun;
+    public string backwardsStun;
+    public string leftStun;
+    public string rightStun;
+
     private void Awake()
     {
         instance = this;
@@ -131,22 +149,22 @@ public class EnemyMovementCombat : MonoBehaviour
         if (direction == "Down")
         {
             //gå ner
-            anim.Play("GoblinForwardAttack"); //Might need work for while damage
+            anim.Play(forwardAttack); //Might need work for while damage
         }
         if (direction == "Up")
         {
             //gå upp
-            anim.Play("GoblinBackwardsAttack"); //Might need work for while damage
+            anim.Play(backwardsAttack); //Might need work for while damage
         }
         if (direction == "Left")
         {
             //gå vänster
-            anim.Play("GoblinLeftAttack"); //Might need work for while damage
+            anim.Play(leftAttack); //Might need work for while damage
         }
         if (direction == "Right")
         {
             //gå höger
-            anim.Play("GoblinRightAttack"); //Might need work for while damage
+            anim.Play(rightAttack); //Might need work for while damage
         }
     }
 
@@ -155,28 +173,28 @@ public class EnemyMovementCombat : MonoBehaviour
         if (rb.velocity.y == -speed && enemyAttack.hasAttacked == false)
         {
             //gå ner
-            anim.Play("GoblinForwardWalk");
+            anim.Play(forwardWalk);
             attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + -1);
             direction = "Down";
         }
         if (rb.velocity.y == speed && enemyAttack.hasAttacked == false)
         {
             //gå upp
-            anim.Play("GoblinBackwardsWalk");
+            anim.Play(backwardsWalk);
             attackBox.transform.position = new Vector2(rb.transform.position.x, rb.transform.position.y + 1);
             direction = "Up";
         }
         if (rb.velocity.x == -speed && enemyAttack.hasAttacked == false)
         {
             //gå vänster
-            anim.Play("GoblinLeftWalk");
+            anim.Play(leftWalk);
             attackBox.transform.position = new Vector2(rb.transform.position.x + -1, rb.transform.position.y);
             direction = "Left";
         }
         if (rb.velocity.x == speed && enemyAttack.hasAttacked == false)
         {
             //gå höger
-            anim.Play("GoblinRightWalk");
+            anim.Play(RightWalk);
             attackBox.transform.position = new Vector2(rb.transform.position.x + 1, rb.transform.position.y);
             direction = "Right";
         }
@@ -187,22 +205,22 @@ public class EnemyMovementCombat : MonoBehaviour
         if (direction == "Down")
         {
             //gå ner
-            anim.Play("GoblinStunnedForward"); //Might need work for while damage
+            anim.Play(forwardStun); //Might need work for while damage
         }
         if (direction == "Up")
         {
             //gå upp
-            anim.Play("GoblinStunnedBackwards"); //Might need work for while damage
+            anim.Play(backwardsStun); //Might need work for while damage
         }
         if (direction == "Left")
         {
             //gå vänster
-            anim.Play("GoblinStunnedLeft"); //Might need work for while damage
+            anim.Play(leftStun); //Might need work for while damage
         }
         if (direction == "Right")
         {
             //gå höger
-            anim.Play("GoblinStunnedRight"); //Might need work for while damage
+            anim.Play(rightStun); //Might need work for while damage
         }
     }
 }

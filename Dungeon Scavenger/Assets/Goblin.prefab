@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1741321050, guid: 15131469afe8da3479fdf2f4e440a45f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,6 +164,18 @@ MonoBehaviour:
   distanceStop: 0
   attackBox: {fileID: 4642318633221809701}
   viewRange: 5
+  forwardWalk: GoblinForwardWalk
+  backwardsWalk: GoblinBackwardsWalk
+  leftWalk: GoblinLeftWalk
+  RightWalk: GoblinRightWalk
+  forwardAttack: GoblinForwardAttack
+  backwardsAttack: GoblinBackwardsAttack
+  leftAttack: GoblinLeftAttack
+  rightAttack: GoblinRightAttack
+  forwardStun: GoblinStunnedForward
+  backwardsStun: GoblinStunnedBackwards
+  leftStun: GoblinStunnedLeft
+  rightStun: GoblinStunnedRight
 --- !u!114 &5039982638589087554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +190,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 1
   isDead: 0
+  deathDrop: {fileID: 4074734483068490387, guid: 5ebe31a889580194787fcff2a8c0edae, type: 3}
+  deathAnimation: GoblinDeath
+  deathTime: 0.75
 --- !u!50 &566521720107888954
 Rigidbody2D:
   serializedVersion: 4
@@ -353,6 +368,7 @@ MonoBehaviour:
   damageAmount: 1
   isStunned: 0
   hasAttacked: 0
+  stunDuration: 5
 --- !u!61 &1007045864161827759
 BoxCollider2D:
   m_ObjectHideFlags: 0

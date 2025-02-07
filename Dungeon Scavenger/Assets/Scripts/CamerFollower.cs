@@ -1,21 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CamerFollower : MonoBehaviour
 {
     public GameObject player;
+    public GameObject enemyCounter;
+    bool canPanToDoor = true;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.y > -5 && player.transform.position.y < 5)
+
+        if (enemyCounter.transform.childCount == 0 && canPanToDoor == true && SceneManager.GetActiveScene().buildIndex != 12)
+        {
+            transform.position = new Vector3(0, 5, -10);
+            Invoke("CameraToDoor", 2);
+        }
+
+
+        else if (player.transform.position.y > -5 && player.transform.position.y < 5)
         {
 
             Vector3 cameraPosition = player.transform.position + new Vector3(0, 0, -10);
@@ -23,7 +35,11 @@ public class CamerFollower : MonoBehaviour
 
             transform.position = cameraPosition;
         }
-       
 
+    }
+
+    void CameraToDoor()
+    {
+        canPanToDoor = false;
     }
 }
