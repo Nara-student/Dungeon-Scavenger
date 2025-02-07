@@ -19,6 +19,9 @@ public class ParkourMovement : MonoBehaviour
     CapsuleCollider2D capsuleCollider;
 
     PlayerParkourHealth playerHealth;
+
+    AudioSource walkingSound;
+    public GameObject jumpSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +30,21 @@ public class ParkourMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         playerHealth = GetComponent<PlayerParkourHealth>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        walkingSound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //idle
+        if (Input.GetKey(KeyCode.A) == false || Input.GetKey(KeyCode.LeftArrow) == false)
+        {
+            walkingSound.mute = true;
+        }
 
-        
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && playerHealth.isDead == false)
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && playerHealth.isDead == false)
         {
             Rb.velocity = new Vector2(-Speed, Rb.velocity.y);
             
@@ -43,6 +53,7 @@ public class ParkourMovement : MonoBehaviour
                 anim.Play("PlayerWalkLeft");
             }
             sprite.flipX = false;
+            walkingSound.mute = false;
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) && playerHealth.isDead == false)
@@ -54,14 +65,16 @@ public class ParkourMovement : MonoBehaviour
                 anim.Play("PlayerWalkLeft");
             }
             sprite.flipX = true;
+            walkingSound.mute = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && playerHealth.isDead == false)
         {
             Jump();
+            GameObject jumpSoundclone = Instantiate(jumpSound);
+            Destroy(jumpSoundclone, 3);
 
 
-          
         }
 
         if(Rb.velocity.x == 0 && Rb.velocity.y == 0 && playerHealth.isDead == false)
@@ -79,6 +92,10 @@ public class ParkourMovement : MonoBehaviour
             Invoke("GameOver", 1);
         }
 
+        if(isJumping == true)
+        {
+            walkingSound.mute = true;
+        }
     }
 
 
@@ -108,6 +125,7 @@ public class ParkourMovement : MonoBehaviour
     {
         jumpCount = 0;
         isJumping = false;
+
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
@@ -23,6 +24,8 @@ public class PlayerCombat : MonoBehaviour
 
     Animator anim;
     PlayerMovement playerMovement;
+
+    public GameObject attackSound;
     void Start()
     {
         time = parryTime;
@@ -94,6 +97,9 @@ public class PlayerCombat : MonoBehaviour
             attackCooldown = cooldown;
             AttackDirection();
             isAttacking = true;
+
+            GameObject attacksoundclone =  Instantiate(attackSound);
+            Destroy(attacksoundclone, 3);
         }
     }
 
