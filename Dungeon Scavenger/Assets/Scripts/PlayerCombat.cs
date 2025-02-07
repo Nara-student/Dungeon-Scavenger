@@ -84,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
 
             if(bossHealth != null)
             {
+                print("attack boss!");
                 bossHealth.takeDamage(damage);
             }
 

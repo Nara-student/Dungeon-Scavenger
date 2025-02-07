@@ -11,16 +11,23 @@ public class TestBossMove : MonoBehaviour
 
     public int damageAmount = 1;
     public float cooldownDuration = 5f;
+    public float meleeCooldownDuration = 1f;
     public float attackDuration = 6f;
-    public float distance = 2f;
+    public float distance = 3f;
     public float speed = 0.3f;
 
+    private float meleeTimer;
     private float cooldownTimer;
     private float attackTimer;
     private bool isInNormalMode;
     private bool isBossAlive;
     private float distanceStop;
     private Animator anim;
+    
+    //Melee Attack
+    private bool isInRange;
+    private bool isNotInAttack;
+    private bool isDoneAttack;
 
     private Rigidbody2D rb;
     private GameObject player;
@@ -38,10 +45,12 @@ public class TestBossMove : MonoBehaviour
 
         cooldownTimer = cooldownDuration;
         attackTimer = attackDuration;
+        meleeTimer = meleeCooldownDuration;
 
 
         isInNormalMode = true;
         isBossAlive = true;
+        isDoneAttack = true;
     }
 
     void Update()
@@ -62,10 +71,12 @@ public class TestBossMove : MonoBehaviour
             {
                 // Reduce the cooldown timer over time
                 cooldownTimer -= Time.deltaTime;
+                isNotInAttack = true;
 
                 if (cooldownTimer <= 0)
                 {
-                    int randomAttack = Random.Range(1, 3);
+                    int randomAttack = Random.Range(3, 3);
+                    isNotInAttack = false;
 
                     // Chooses randomly what attack to use
                     if (randomAttack == 1)
@@ -100,6 +111,27 @@ public class TestBossMove : MonoBehaviour
                     isInNormalMode = true; // Return to normal mode
                 }
             }
+
+            if (isInRange && isNotInAttack)
+            {
+                print("Start attack?");
+                if (meleeTimer > 0)
+                {
+                    meleeTimer -= Time.deltaTime;
+                    anim.Play("BossIdle");
+                }
+                if (meleeTimer <= 1)
+                {
+                    attackMelee();
+                    isDoneAttack = false;
+                    if(meleeTimer <= 0)
+                    {
+                       meleeTimer = meleeCooldownDuration; // Resets the cooldown timer for melee
+                        isDoneAttack = true;
+                    }
+                }
+            }
+
         }
         else
         {
@@ -113,32 +145,59 @@ public class TestBossMove : MonoBehaviour
         //Keeps from interlapping with target (Player)
         distanceStop = Vector2.Distance(transform.position, player.transform.position);
         //BossAnimations.instance.RunAnim();
-        anim.Play("BossRunForward");
         print("walk");
 
         if (distanceStop >= distance)
         {
             //Makes the Enemy follow target (Player)
-            BossAnimations.instance.IdleAnim();
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            anim.Play("BossRun");
+            meleeTimer = meleeCooldownDuration;
+            isInRange = false;
         }
+        else if( distanceStop < distance)
+        {
+            //When in distance with target
+            isInRange = true;
+        }
+
+
 
     }
 
     void attackOne()
     {
         print("ATTACK ONE IS USED!");
+        anim.Play("BossSlam");
         VisibleAttackRange.instance.largeAttackBegins();
     }
     void attackTwo()
     {
         //Finished
         print("ATTACK TWO IS USED!");
+       
         BossShockWaves.instance.startShockWaves();
+    }
+    void attackMelee()
+    {
+        anim.Play("BossSwing");
+
+        if (isDoneAttack)
+        {
+            PlayerHealth.instance.PlayerTakesDamage(damageAmount);
+            print("AttacK!");
+        }
     }
 
     public void deathEnd()
     {
         isBossAlive = false;
+        anim.Play("BossDeath");
+        //Destroy(gameObject);
     }
+
+
+
+
+
 }

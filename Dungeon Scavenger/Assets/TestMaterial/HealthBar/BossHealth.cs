@@ -11,6 +11,8 @@ public class BossHealth : MonoBehaviour
 
     public BossHealthBar healthbar;
 
+    private bool isInRange;
+
     private void Awake()
     {
         instance = this;
@@ -27,14 +29,27 @@ public class BossHealth : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-
-        currentHealth -= damage;
-        healthbar.setHealth(currentHealth);
-        if(currentHealth <= 0)
+        if (isInRange)
         {
-            death();
+            currentHealth -= damage;
+            healthbar.setHealth(currentHealth);
+            if (currentHealth <= 0)
+            {
+                death();
+            }
         }
+        
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isInRange = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isInRange = false;
+    }
+
 
     public void death()
     {

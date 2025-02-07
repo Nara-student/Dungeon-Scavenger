@@ -16,6 +16,7 @@ public class BossShockWaves : MonoBehaviour
     private float cooldownTimer = 0f;
     private Collider2D meleeAttackDistance;
     private bool isIsRange;
+    private Animator anim;
 
     public void Awake()
     {
@@ -25,6 +26,7 @@ public class BossShockWaves : MonoBehaviour
     void Start()
     {
         meleeAttackDistance = GetComponent<Collider2D>();
+        anim = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,8 +42,7 @@ public class BossShockWaves : MonoBehaviour
             if (cooldownTimer <= 0)
             {
                 shootProjectile();
-                BossAnimations.instance.SwingAnim();
-                // EnemyMovementCombat.instance.attackAnimation();
+                anim.Play("BossSwing");
                 cooldownTimer = cooldownDuration; // Resets the cooldown timer
             }
         }

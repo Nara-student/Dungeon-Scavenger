@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47949a5dc91bd0941b6f7ae1b779b05c
+guid: d9ed646901d478543b5242b296b0a462
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossRunSheet_0
+      name: BossBeforeSlam 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
-        height: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd6ac5f1559aed847b9760117f2de986
-      internalID: -211982920
+      spriteID: 6c878084381d7064ea0b6ca3e06ce6ad
+      internalID: -494751531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossRunSheet_1
+      name: BossBeforeSlam 1_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
-        height: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ada470d89c94a84f9076a9da129ee7f
-      internalID: 1081580322
+      spriteID: a4ddb4542b721454f90f654b131c25e1
+      internalID: -989467438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossRunSheet_2
+      name: BossBeforeSlam 1_2
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
-        height: 128
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,29 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc5888529d66ed499fbcebbcc9538d7
-      internalID: -997570006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BossRunSheet_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ca02f27ecab4c646af3568e18eba7bb
-      internalID: 587523594
+      spriteID: c49598353000ddf44bb34724388cc97b
+      internalID: -1255061704
       vertices: []
       indices: 
       edges: []
@@ -204,10 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BossRunSheet_0: -211982920
-      BossRunSheet_1: 1081580322
-      BossRunSheet_2: -997570006
-      BossRunSheet_3: 587523594
+      BossBeforeSlam 1_0: -494751531
+      BossBeforeSlam 1_1: -989467438
+      BossBeforeSlam 1_2: -1255061704
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
