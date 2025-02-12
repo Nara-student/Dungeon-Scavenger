@@ -127,6 +127,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2626648018608160845, guid: f7ba135cea39ff448a62f966f9e9fc8c, type: 3}
   m_PrefabInstance: {fileID: 2077394058}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &145313355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145313354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7544aced80b82c34491fc89cc48b9554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumAmount: 1
+  Enemy: {fileID: 3631017950787527534, guid: 4b9d01879f2883e4792ed80d309742ab, type: 3}
 --- !u!1 &366372915
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: stagedRoom
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7218567140255510337, guid: 528ed074363d022478648dd169df6c6f, type: 3}
       propertyPath: enemyCounter
@@ -1132,7 +1146,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2626648018608160845, guid: f7ba135cea39ff448a62f966f9e9fc8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 145313355}
   m_SourcePrefab: {fileID: 100100000, guid: f7ba135cea39ff448a62f966f9e9fc8c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

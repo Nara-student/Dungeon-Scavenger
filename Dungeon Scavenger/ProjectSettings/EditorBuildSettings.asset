@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game_scenes/Room7.unity
     guid: d7b0dca08d4f17a49bb3312d58a6a4e4
+  - enabled: 1
+    path: Assets/Scenes/Game_scenes/Labyrinth.unity
+    guid: 86c88cc5957328845819527b2f753545
   m_configObjects: {}

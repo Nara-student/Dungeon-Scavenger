@@ -4466,7 +4466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472102726c6043543a4fcc39fa153c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stagedRoom: 10
+  stagedRoom: 3
 --- !u!212 &486264166
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49067,7 +49067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472102726c6043543a4fcc39fa153c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stagedRoom: 1
+  stagedRoom: 13
 --- !u!212 &1194822049
 SpriteRenderer:
   m_ObjectHideFlags: 0

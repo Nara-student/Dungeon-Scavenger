@@ -17,6 +17,7 @@ public class LabyrinthCameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //kamera y axel
         if (player.transform.position.y > -40 && player.transform.position.y < 115)
         {
 
@@ -25,6 +26,7 @@ public class LabyrinthCameraFollow : MonoBehaviour
             transform.position = new Vector3(cameraPositionX, cameraPositionY, -10);
         }
 
+        //kamera x axel
         if (player.transform.position.x > -86 && player.transform.position.x < 81)
         {
 

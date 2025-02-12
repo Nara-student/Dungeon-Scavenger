@@ -11,7 +11,6 @@ public class PrCameraFollowing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
         playerHealth = FindAnyObjectByType<PlayerParkourHealth>();
     }
 

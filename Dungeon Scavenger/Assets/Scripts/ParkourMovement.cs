@@ -71,10 +71,6 @@ public class ParkourMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && playerHealth.isDead == false)
         {
             Jump();
-            GameObject jumpSoundclone = Instantiate(jumpSound);
-            Destroy(jumpSoundclone, 3);
-
-
         }
 
         if(Rb.velocity.x == 0 && Rb.velocity.y == 0 && playerHealth.isDead == false)
@@ -108,6 +104,8 @@ public class ParkourMovement : MonoBehaviour
             Rb.velocity = new Vector2(Rb.velocity.x, 5);
             anim.Play("PlayerJump");
             isJumping = true;
+            GameObject jumpSoundclone = Instantiate(jumpSound);
+            Destroy(jumpSoundclone, 3);
         }
     }
 

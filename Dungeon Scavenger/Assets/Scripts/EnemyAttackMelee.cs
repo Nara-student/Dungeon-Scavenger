@@ -75,7 +75,10 @@ public class EnemyAttackMelee2 : MonoBehaviour
             //attack
             if (cooldownTimer <= 0 && playerCombat.isBlocking == false && isStunned == false)
             {
-                enemyMovement.attackAnimation();
+                if(enemyHealth.isDead == false)
+                {
+                    enemyMovement.attackAnimation();
+                }
                 cooldownTimer = cooldownDuration; //s Reset the cooldown timer
 
                 Invoke("damageTarget", damageDelay);

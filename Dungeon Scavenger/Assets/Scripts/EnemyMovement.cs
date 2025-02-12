@@ -25,6 +25,8 @@ public class EnemyMovementCombat : MonoBehaviour
 
     [SerializeField] float viewRange = 5;
 
+    [SerializeField] float spawnDelay = 0;
+
     string direction;
 
     [Header("WalkAnimations")]
@@ -66,10 +68,18 @@ public class EnemyMovementCombat : MonoBehaviour
     {
         if (canChase)
         {
-            follow();
+            if(spawnDelay <= 0)
+            {
+                follow();
+            } 
         }
 
         isInTriggerDistance();
+
+        if(spawnDelay > 0)
+        {
+            spawnDelay -= Time.deltaTime;
+        }
 
     }
 
